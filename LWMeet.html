@@ -20,7 +20,7 @@
         <button type="button" class="answer">0</button>
       </div>
       <div id="indice1" class="indice">
-        <p>Dans la série, Lucifer rencontre sa fille.</p>
+        <p>Lucifer rencontre sa fille dans la dernière saison.</p>
         <div id="buttons1" class="buttons"></div>
         <div id="feedback1" class="feedback"></div>
         <button class="btnPopup" data-index="1" style="display: none"></button>
@@ -85,7 +85,7 @@
         <div class="popOverlay" id="popOverlay5">
           <div id="popup" class="popup">
             <span id="btnClose" class="btnClose">&times;</span>
-            <p>Les humains n'ont qu'une seule vie, tandis que les chats.</p>
+            <p>Les humains n'ont qu'une seule vie, tandis que les chats...</p>
           </div>
         </div>
       </div>
@@ -152,6 +152,7 @@
     <div id="complete" style="display: none">
       <div id="overlay"></div>
       <div>Le numéro de téléphone complet :</div>
+      <div class="numbersContainer">
       <input
         type="text"
         id="digit0"
@@ -232,6 +233,7 @@
         placeholder="0"
         readonly
       />
+      </div>
       <button id="callButton" onclick="startCalling()">
         Composer le numéro
       </button>
@@ -245,10 +247,10 @@
       </div>
     </div>
     <audio id="dial">
-      <source src="dialing.mp3" type="audio/mpeg" />
+      <source src="dialNumbers.ogg" type="audio/ogg" />
     </audio>
     <audio id="fade">
-      <source src="silentFade.mp3" type="audio/mpeg" />
+      <source src="SilentFade.ogg" type="audio/ogg" />
     </audio>
     <script src="LWMeet.js"></script>
   </body>

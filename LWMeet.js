@@ -131,6 +131,9 @@ function handleIncorrectAnswer(indice) {
 
     // Ajout du bouton "Un indice ?" sous le paragraphe "Mauvaise réponse !"
     feedback.appendChild(btnPopup);
+
+    // Défilement automatique vers l'indice de la question avec le bouton "Un indice"
+    scrollToIndice(indice);
   } else if (errorCounts[indice] < 3) {
     feedback.textContent = "Mauvaise réponse !";
     feedback.className = "feedback incorrect";
@@ -161,7 +164,7 @@ function handleComplete() {
 
   document.getElementById("container").style.display = "none";
   // Afficher la section de numéro complet
-  document.getElementById("complete").style.display = "block";
+  document.getElementById("complete").style.display = "flex";
 
   const overlay = document.getElementById("overlay");
   overlay.classList.remove("active");
@@ -181,7 +184,7 @@ function displayMessages(messages) {
     messagesContainer.appendChild(messageDiv);
   });
 
-  messagesContainer.style.display = "block"; // Afficher le conteneur de messages
+  messagesContainer.style.display = "flex"; // Afficher le conteneur de messages
 }
 
 // Fonction pour démarrer l'appel après avoir composé le numéro complet

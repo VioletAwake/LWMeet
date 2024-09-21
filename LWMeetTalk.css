@@ -375,29 +375,31 @@
     display: flex;
     height: 100vh;
     margin: 0;
+    border: 5px solid red;
   }
 
   .chat-container {
     width: 100%;
     height: auto;
+    border: 3px solid blue;
     background-color: black;
     display: flex;
     flex-direction: column;
-    position: relative;
   }
 
   .chat-box {
     flex: 1;
-    padding: 25px;
+    padding: 5px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     margin: 0;
+    border: 3px solid green;
   }
 
   .message {
     margin: 5px 0;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     width: fit-content;
     opacity: auto;
@@ -409,7 +411,7 @@
   .message .text {
     display: inline-block;
     opacity: 1;
-    font-size: 25px;
+    font-size: 15px;
   }
 
   .user {
@@ -434,10 +436,10 @@
   button {
     position: relative;
     margin-left: auto;
-    bottom: 40px;
     width: fit-content;
     font-size: 20px;
     padding: 10px;
+    margin-top: 20px;
     border: none;
     background-color: black;
     border: 2px solid white;

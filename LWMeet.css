@@ -480,21 +480,22 @@
   body {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: black !important;
     color: white;
-    padding: 5px;
     overflow: scroll;
     scroll-behavior: smooth;
+    height: auto;
   }
 
   .container {
     display: flex;
     flex-direction: column;
     font-size: 20px;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
     text-align: center;
     padding: 25px;
+    height: auto;
   }
 
   .container h1 {
@@ -518,7 +519,8 @@
   .indice {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    padding: 15px;
   }
 
   .imageIndice8 {
@@ -544,7 +546,7 @@
   .popOverlay {
     position: fixed;
     left: 0;
-    top: 0;
+    bottom: 10%;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
@@ -607,10 +609,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+    margin: 30px auto;
     text-align: center;
-    max-width: 500px;
-    margin: 40px 0px;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
     font-size: 20px;
+    overflow: hidden;
+  }
+
+  .numbersContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .number-input {
@@ -631,7 +643,7 @@
     font-size: 20px;
     margin-top: 20px;
     border: 3px solid white;
-    padding: 5px;
+    padding: 10px 5px;
   }
 
   #callButton:active {
@@ -641,24 +653,29 @@
   }
 
   .messages-container {
-    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    margin: auto 10%;
+    margin-bottom: 5%;
   }
 
   .message {
-    background-color: rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     color: white;
-    padding: 15px;
-    margin: 5px 10px;
+    padding: 5px;
     border-radius: 5px;
     opacity: 0;
     animation: fadeIn 1s forwards;
   }
 
   #finalMessage {
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     color: black;
-    margin-top: 500px;
   }
 
   @keyframes fadeIn {
