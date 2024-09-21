@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet</title>
+    <link rel="stylesheet" href="LWMeet.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <h1>Je dois trouver ce numéro !</h1>
+
+      <h2>
+        Plusieurs chiffres, un seul numéro. Je dois
+        <strong>le</strong> contacter !
+      </h2>
+
+      <div id="zero" class="zero">
+        <p>Au début, rien.</p>
+        <button type="button" class="answer">0</button>
+      </div>
+      <div id="indice1" class="indice">
+        <p>Dans la série, Lucifer rencontre sa fille.</p>
+        <div id="buttons1" class="buttons"></div>
+        <div id="feedback1" class="feedback"></div>
+        <button class="btnPopup" data-index="1" style="display: none"></button>
+        <div class="popOverlay" id="popOverlay1" style="display: none">
+          <div id="popup" class="popup">
+            <span id="btnClose" class="btnClose">&times;</span>
+            <p>Lucifer, le diable, le nombre, un seul des trois suffit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="indice2" class="indice" style="display: none">
+        <p>Les anciens dieux d'Asgard chantent</p>
+        <div id="buttons2" class="buttons"></div>
+        <div id="feedback2" class="feedback"></div>
+        <button class="btnPopup" data-index="2" style="display: none"></button>
+        <div class="popOverlay" id="popOverlay2">
+          <div id="popup" class="popup">
+            <span id="btnClose" class="btnClose">&times;</span>
+            <p>Combien de chansons pour le Rebirth des Old Gods of Asgard ?</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="indice3" class="indice" style="display: none">
+        <p>
+          Il restait encore une saison pour l'homme à la trançonneuse et le
+          livre maléfique
+        </p>
+        <div id="buttons3" class="buttons"></div>
+        <div id="feedback3" class="feedback"></div>
+        <button class="btnPopup" data-index="3" style="display: none"></button>
+        <div class="popOverlay" id="popOverlay3">
+          <div id="popup" class="popup">
+            <span id="btnClose" class="btnClose">&times;</span>
+            <p>
+              Ashy Slashy se réveille dans le futur. Cette fin brutale fut assez
+              dur.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="indice4" class="indice" style="display: none">
+        <p>Des dieux égyptiens dans des cartes ??</p>
+        <div id="buttons4" class="buttons"></div>
+        <div id="feedback4" class="feedback"></div>
+        <button class="btnPopup" data-index="4" style="display: none"></button>
+        <div class="popOverlay" id="popOverlay4">
+          <div id="popup" class="popup">
+            <span id="btnClose" class="btnClose">&times;</span>
+            <p>On dirait l'intrigue d'un manga !</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="indice5" class="indice" style="display: none">
+        <p>"On n'a qu'une seule vie !" Va dire ça à Felicia et à Selina !</p>
+        <div id="buttons5" class="buttons"></div>
+        <div id="feedback5" class="feedback"></div>
+        <button class="btnPopup" data-index="5" style="display: none"></button>
+        <div class="popOverlay" id="popOverlay5">
+          <div id="popup" class="popup">
+            <span id="btnClose" class="btnClose">&times;</span>
+            <p>Les humains n'ont qu'une seule vie, tandis que les chats.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="indice6" class="indice" style="display: none">
+        <p>Il est l'élu, mais c'est plus classe en anglais</p>
+        <div id="buttons6" class="buttons"></div>
+        <div id="feedback6" class="feedback"></div>
+        <button class="btnPopup" data-index="6" style="display: none"></button>
+        <div class="popOverlay" id="popOverlay6">
+          <div id="popup" class="popup">
+            <span id="btnClose" class="btnClose">&times;</span>
+            <p>Comment dit-on "L'élu" en anglais ?</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="indice7" class="indice" style="display: none">
+        <p>Batman a trouvé une pièce de monnaie sur la scène de crime.</p>
+        <div id="buttons7" class="buttons"></div>
+        <div id="feedback7" class="feedback"></div>
+        <button class="btnPopup" data-index="7" style="display: none"></button>
+        <div class="popOverlay" id="popOverlay7">
+          <div id="popup" class="popup">
+            <span id="btnClose" class="btnClose">&times;</span>
+            <p>
+              Quel est le point commun entre Harvey Dent et une pièce de monnaie
+              ?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="indice8" class="indice" style="display: none">
+        <p>Hulk Hogan vs Andre le Géant</p>
+        <div id="buttons8" class="buttons"></div>
+        <div id="feedback8" class="feedback"></div>
+        <button class="btnPopup" data-index="8" style="display: none"></button>
+        <div class="popOverlay" id="popOverlay8">
+          <div id="popup" class="popup">
+            <span id="btnClose" class="btnClose">&times;</span>
+            <img
+              class="imageIndice8"
+              src="Wrestlemania3.jpg"
+              alt="Wrestlemania 3"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div id="indice9" class="indice" style="display: none">
+        <p>La boucle, la fin revient au début</p>
+        <div id="buttons9" class="buttons"></div>
+        <div id="feedback9" class="feedback"></div>
+        <button class="btnPopup" data-index="9" style="display: none"></button>
+        <div class="popOverlay" id="popOverlay9">
+          <div id="popup" class="popup">
+            <span id="btnClose" class="btnClose">&times;</span>
+            <p>ça finit, comme ça commence, la boucle est bouclée.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="complete" style="display: none">
+      <div id="overlay"></div>
+      <div>Le numéro de téléphone complet :</div>
+      <input
+        type="text"
+        id="digit0"
+        class="number-input"
+        maxlength="1"
+        placeholder="0"
+        readonly
+      />
+      <input
+        type="text"
+        id="digit1"
+        class="number-input"
+        maxlength="1"
+        placeholder="0"
+        readonly
+      />
+      <input
+        type="text"
+        id="digit2"
+        class="number-input"
+        maxlength="1"
+        placeholder="0"
+        readonly
+      />
+      <input
+        type="text"
+        id="digit3"
+        class="number-input"
+        maxlength="1"
+        placeholder="0"
+        readonly
+      />
+      <input
+        type="text"
+        id="digit4"
+        class="number-input"
+        maxlength="1"
+        placeholder="0"
+        readonly
+      />
+      <input
+        type="text"
+        id="digit5"
+        class="number-input"
+        maxlength="1"
+        placeholder="0"
+        readonly
+      />
+      <input
+        type="text"
+        id="digit6"
+        class="number-input"
+        maxlength="1"
+        placeholder="0"
+        readonly
+      />
+      <input
+        type="text"
+        id="digit7"
+        class="number-input"
+        maxlength="1"
+        placeholder="0"
+        readonly
+      />
+      <input
+        type="text"
+        id="digit8"
+        class="number-input"
+        maxlength="1"
+        placeholder="0"
+        readonly
+      />
+      <input
+        type="text"
+        id="digit9"
+        class="number-input"
+        maxlength="1"
+        placeholder="0"
+        readonly
+      />
+      <button id="callButton" onclick="startCalling()">
+        Composer le numéro
+      </button>
+      <div id="phoneFeedback" class="feedback"></div>
+      <div id="numbersMessage">
+        <p id="callText" style="display: none"></p>
+      </div>
+      <div id="messages-container" class="messages-container"></div>
+      <div id="finalMessage">
+        <p>Enfin, nous nous rencontrons !</p>
+      </div>
+    </div>
+    <audio id="dial">
+      <source src="dialing.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="fade">
+      <source src="silentFade.mp3" type="audio/mpeg" />
+    </audio>
+    <script src="LWMeet.js"></script>
+  </body>
+</html>

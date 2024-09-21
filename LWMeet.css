@@ -1,0 +1,690 @@
+@media screen and (min-width: 1441px) {
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: black;
+    overflow: auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: 0 auto;
+    background: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid white;
+  }
+
+  .container h1,
+  h2 {
+    color: white;
+    text-align: center;
+  }
+
+  .indice {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    color: white;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .zero {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-size: 25px;
+    gap: 10px;
+  }
+
+  .zero button {
+    width: 35px;
+    font-size: 25px;
+    background-color: white;
+    color: black;
+  }
+
+  .buttons button {
+    width: 35px;
+    font-size: 25px;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+  }
+
+  .buttons button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+
+  .popOverlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .btnPopup {
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .btnPopup:hover {
+    color: red;
+  }
+
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 25px;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 20px 20px;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    text-align: center; /* Centre le texte à l'intérieur du popup */
+    width: 50%; /* Largeur du popup */
+    position: relative; /* Positionne le popup relativement pour le bouton de fermeture */
+  }
+
+  .btnClose {
+    position: absolute; /* Positionne le bouton de fermeture par rapport au popup */
+    top: 5px; /* Position du haut */
+    right: 15px; /* Position de la droite */
+    font-size: 40px;
+    cursor: pointer;
+    color: red;
+    background: none; /* Aucun fond */
+    border: none; /* Aucun bord */
+  }
+
+  .zero p {
+    color: white;
+  }
+
+  .answer {
+    margin-bottom: 10px;
+  }
+
+  .feedback {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .correct {
+    color: green;
+  }
+
+  .correct-button {
+    background-color: green;
+    color: white;
+  }
+
+  .incorrect {
+    color: red;
+  }
+
+  .number-input {
+    width: 30px;
+    text-align: center;
+    font-size: 40px;
+    color: green;
+    background-color: black;
+    border: none;
+  }
+
+  #callButton {
+    width: 200px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  #callButton:hover {
+    background-color: white;
+    color: black;
+  }
+
+  #finalMessage {
+    font-size: 35px;
+    text-align: center;
+    color: black;
+    margin-top: 430px;
+  }
+
+  .imageIndice8 {
+    width: 40vw;
+    height: 60vh;
+  }
+
+  #complete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+    transform: translateX(100%);
+    margin: 20px 0px;
+  }
+
+  .messages-container {
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    text-align: center;
+  }
+
+  .message {
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    padding: 15px;
+    margin: 5px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 6s;
+    z-index: 9999;
+  }
+
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: black;
+    overflow: auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: 0 auto;
+    background: black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid white;
+  }
+
+  .container h1,
+  h2 {
+    color: white;
+    text-align: center;
+  }
+
+  .indice {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    color: white;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .zero {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    font-size: 25px;
+    gap: 10px;
+  }
+
+  .zero button {
+    width: 35px;
+    font-size: 25px;
+    background-color: white;
+    color: black;
+  }
+
+  .buttons button {
+    width: 35px;
+    font-size: 25px;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+  }
+
+  .buttons button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+
+  .popOverlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .btnPopup {
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .btnPopup:hover {
+    color: red;
+  }
+
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 25px;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 20px 20px;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+    text-align: center; /* Centre le texte à l'intérieur du popup */
+    width: 50%; /* Largeur du popup */
+    position: relative; /* Positionne le popup relativement pour le bouton de fermeture */
+  }
+
+  .btnClose {
+    position: absolute; /* Positionne le bouton de fermeture par rapport au popup */
+    top: 5px; /* Position du haut */
+    right: 15px; /* Position de la droite */
+    font-size: 40px;
+    cursor: pointer;
+    color: red;
+    background: none; /* Aucun fond */
+    border: none; /* Aucun bord */
+  }
+
+  .zero p {
+    color: white;
+  }
+
+  .answer {
+    margin-bottom: 10px;
+  }
+
+  .feedback {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .correct {
+    color: green;
+  }
+
+  .correct-button {
+    background-color: green;
+    color: white;
+  }
+
+  .incorrect {
+    color: red;
+  }
+
+  .number-input {
+    width: 30px;
+    text-align: center;
+    font-size: 40px;
+    color: green;
+    background-color: black;
+    border: none;
+  }
+
+  #callButton {
+    width: 200px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  #callButton:hover {
+    background-color: white;
+    color: black;
+  }
+
+  #finalMessage {
+    font-size: 35px;
+    text-align: center;
+    color: black;
+    margin-top: 430px;
+  }
+
+  .imageIndice8 {
+    width: 40vw;
+    height: 60vh;
+  }
+
+  #complete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+    transform: translateX(100%);
+    margin: 20px 0px;
+  }
+
+  .messages-container {
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    text-align: center;
+  }
+
+  .message {
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    padding: 15px;
+    margin: 5px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 6s;
+    z-index: 9999;
+  }
+
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .container h1 {
+    font-size: 35px;
+  }
+
+  .container h2 {
+    font-size: 25px;
+  }
+
+  .container button {
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .indice {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .imageIndice8 {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .buttons :active {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+  }
+
+  .popOverlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .btnPopup {
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .btnPopup :active {
+    color: red;
+  }
+
+  .popup {
+    position: relative;
+    top: 50%;
+    font-size: 25px;
+    background-color: black;
+    border: 3px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto 5%;
+    width: auto;
+  }
+
+  .btnClose {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 35px;
+    color: red;
+  }
+
+  .feedback {
+    margin-top: 5px;
+    font-weight: bold;
+  }
+
+  .correct {
+    color: green;
+  }
+
+  .incorrect {
+    color: red;
+  }
+
+  .correct-button {
+    background-color: green;
+    color: white;
+  }
+
+  #complete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+    margin: 40px 0px;
+    font-size: 20px;
+  }
+
+  .number-input {
+    width: 25px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: black;
+    color: green;
+    border: none;
+  }
+
+  #callButton {
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    border: 3px solid white;
+    padding: 5px;
+  }
+
+  #callButton:active {
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+  }
+
+  .messages-container {
+    position: fixed;
+  }
+
+  .message {
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    padding: 15px;
+    margin: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+
+  #finalMessage {
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    margin-top: 500px;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 6s;
+    z-index: 9999;
+  }
+
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
