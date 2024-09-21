@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Masquer après 2 secondes
     setTimeout(() => {
       repeatLoop.style.display = "none";
+      monologueBox.style.display = "none";
       loopSong.pause();
     }, 7000);
 
