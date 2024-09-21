@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monologue</title>
+    <link rel="stylesheet" href="LWMeetConclusion.css" />
+    <link href="https://fonts.cdnfonts.com/css/vcr-osd-mono" rel="stylesheet">
+  </head>
+  <body>
+    <button id="monologueBtn">Et maintenant ?</button>
+    <div id="monologue-box" class="monologue-box">
+      <div id="overlay" class="overlay"></div>
+      <div id="repeatLoop" class="hidden">
+        <p>Briser la boucle</p>
+      </div>
+    </div>
+    <audio id="monologueSong" src="monologue.ogg" type="audio/ogg"></audio>
+    <audio id="loopSong" src="dialLoop.ogg" loop type="audio/ogg"></audio>
+    <video
+      id="toBeContinued"
+      src="ToBeContinuedLWMeet.mp4"
+      type="video/mp4"
+      style="display: none"
+    ></video>
+    <video
+        id="toBeContinuedMobile"
+        src="ToBeContinuedMobile.mp4"
+        type="video/mp4"
+        style="display: none"
+    ></video>
+    <div id="ending" style="display: none;">
+    <button type="button" id="exitBtn">Exit</p>
+    <button type="button" class="songBtn"><a href="https://youtu.be/Qh3sZvAmXq4?si=6BqOqPT4-yvZU3aP" target="_blank">♪ Old Gods of Asgard - The Poet and The Muse ♪</a></button>
+    </div>
+    <script src="LWMeetConclusion.js"></script>
+  </body>
+</html>
