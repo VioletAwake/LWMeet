@@ -1,0 +1,555 @@
+@media screen and (min-width: 1441px) {
+  body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .chat-container {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    opacity: auto;
+    display: flex;
+    flex-direction: column;
+    white-space: pre-wrap; /* Permet les sauts de ligne */
+  }
+
+  .message .text {
+    display: inline-block;
+    opacity: 1;
+    font-size: 40px;
+  }
+
+  .user {
+    align-self: flex-end;
+    text-align: end;
+    background-color: black;
+    border: 5px solid rgb(3, 167, 145);
+    border-radius: 20px;
+    color: rgb(3, 167, 145);
+  }
+
+  .bot {
+    align-self: flex-start;
+    text-align: start;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 20px;
+    color: white;
+    font-style: italic;
+  }
+
+  button {
+    position: relative;
+    margin-left: auto;
+    width: fit-content;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: black;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+
+  .screamer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: none;
+  }
+
+  #screamerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 1;
+  }
+
+  /* Glitch effect styles */
+  .glitch {
+    position: relative;
+    color: #fff;
+    font-size: 1.1em;
+    text-shadow: 1px 0 red;
+    animation: glitch-animation 0.2s infinite linear;
+  }
+
+  @keyframes glitch-animation {
+    0% {
+      text-shadow: 1px 0 red;
+      opacity: 0;
+    }
+    20% {
+      text-shadow: -5px 4px red;
+    }
+    40% {
+      text-shadow: 1px 0 red;
+    }
+    60% {
+      text-shadow: -1px 0 red;
+      opacity: 0.5;
+    }
+    80% {
+      text-shadow: 1px 20px red;
+    }
+    100% {
+      text-shadow: -1px 0 red;
+      opacity: 1;
+    }
+  }
+
+  @keyframes glitch-border {
+    0% {
+      border-color: white;
+    }
+    20% {
+      border-color: black;
+    }
+    40% {
+      border-color: white;
+      border: 5px double white;
+      border-radius: 100% 30% 50% 90%;
+    }
+    60% {
+      border-color: red;
+      border: 5px solid red;
+      border-radius: 90% 10rem 100% 90%;
+    }
+    80% {
+      border-color: purple;
+    }
+    100% {
+      border-color: white;
+      border: 5px solid white;
+    }
+  }
+
+  .glitch-border {
+    animation: glitch-border 0.5s infinite;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .chat-container {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    opacity: auto;
+    display: flex;
+    flex-direction: column;
+    white-space: pre-wrap; /* Permet les sauts de ligne */
+  }
+
+  .message .text {
+    display: inline-block;
+    opacity: 1;
+    font-size: 40px;
+  }
+
+  .user {
+    align-self: flex-end;
+    text-align: end;
+    background-color: black;
+    border: 5px solid rgb(3, 167, 145);
+    border-radius: 20px;
+    color: rgb(3, 167, 145);
+  }
+
+  .bot {
+    align-self: flex-start;
+    text-align: start;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 20px;
+    color: white;
+    font-style: italic;
+  }
+
+  button {
+    position: relative;
+    margin-left: auto;
+    width: fit-content;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: black;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+
+  .screamer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: none;
+  }
+
+  #screamerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 1;
+  }
+
+  /* Glitch effect styles */
+  .glitch {
+    position: relative;
+    color: #fff;
+    font-size: 1.1em;
+    text-shadow: 1px 0 red;
+    animation: glitch-animation 0.2s infinite linear;
+  }
+
+  @keyframes glitch-animation {
+    0% {
+      text-shadow: 1px 0 red;
+      opacity: 0;
+    }
+    20% {
+      text-shadow: -5px 4px red;
+    }
+    40% {
+      text-shadow: 1px 0 red;
+    }
+    60% {
+      text-shadow: -1px 0 red;
+      opacity: 0.5;
+    }
+    80% {
+      text-shadow: 1px 20px red;
+    }
+    100% {
+      text-shadow: -1px 0 red;
+      opacity: 1;
+    }
+  }
+
+  @keyframes glitch-border {
+    0% {
+      border-color: white;
+    }
+    20% {
+      border-color: black;
+    }
+    40% {
+      border-color: white;
+      border: 5px double white;
+      border-radius: 100% 30% 50% 90%;
+    }
+    60% {
+      border-color: red;
+      border: 5px solid red;
+      border-radius: 90% 10rem 100% 90%;
+    }
+    80% {
+      border-color: purple;
+    }
+    100% {
+      border-color: white;
+      border: 5px solid white;
+    }
+  }
+
+  .glitch-border {
+    animation: glitch-border 0.5s infinite;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .chat-container {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .chat-box {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    opacity: auto;
+    display: flex;
+    flex-direction: column;
+    white-space: pre-wrap; /* Permet les sauts de ligne */
+  }
+
+  .message .text {
+    display: inline-block;
+    opacity: 1;
+    font-size: 25px;
+  }
+
+  .user {
+    align-self: flex-end;
+    background-color: black;
+    border: 5px solid rgb(3, 167, 145);
+    border-radius: 20px;
+    color: rgb(3, 167, 145);
+    text-align: end;
+  }
+
+  .bot {
+    align-self: flex-start;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 20px;
+    color: white;
+    font-style: italic;
+    text-align: start;
+  }
+
+  button {
+    position: relative;
+    margin-left: auto;
+    bottom: 40px;
+    width: fit-content;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
+  ::-webkit-scrollbar {
+    background-color: black;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+
+  .screamer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    pointer-events: none;
+  }
+
+  #screamerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 1;
+  }
+
+  /* Glitch effect styles */
+  .glitch {
+    position: relative;
+    color: #fff;
+    font-size: 1.1em;
+    text-shadow: 1px 0 red;
+    animation: glitch-animation 0.2s infinite linear;
+  }
+
+  @keyframes glitch-animation {
+    0% {
+      text-shadow: 1px 0 red;
+      opacity: 0;
+    }
+    20% {
+      text-shadow: -5px 4px red;
+    }
+    40% {
+      text-shadow: 1px 0 red;
+    }
+    60% {
+      text-shadow: -1px 0 red;
+      opacity: 0.5;
+    }
+    80% {
+      text-shadow: 1px 20px red;
+    }
+    100% {
+      text-shadow: -1px 0 red;
+      opacity: 1;
+    }
+  }
+
+  @keyframes glitch-border {
+    0% {
+      border-color: white;
+    }
+    20% {
+      border-color: black;
+    }
+    40% {
+      border-color: white;
+      border: 5px double white;
+      border-radius: 100% 30% 50% 90%;
+    }
+    60% {
+      border-color: red;
+      border: 5px solid red;
+      border-radius: 90% 10rem 100% 90%;
+    }
+    80% {
+      border-color: purple;
+    }
+    100% {
+      border-color: white;
+      border: 5px solid white;
+    }
+  }
+
+  .glitch-border {
+    animation: glitch-border 0.5s infinite;
+  }
+}
