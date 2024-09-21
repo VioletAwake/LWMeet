@@ -403,20 +403,21 @@
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: black;
-    overflow: hidden;
+    overflow: auto;
   }
 
   .container {
     position: relative;
-    width: 90%;
-    height: 90%;
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;
   }
 
   #monologueBtn {
@@ -449,16 +450,15 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
+    border: 3px solid red;
     gap: 5px;
-    padding: 30px;
-    margin: 0 auto;
+    padding: 5px;
     overflow: auto;
     display: none;
     scroll-behavior: smooth;
   }
 
   .message {
-    margin: 5px 0;
     padding: 5px;
     border-radius: 5px;
     opacity: 0;

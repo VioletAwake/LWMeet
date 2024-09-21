@@ -141,6 +141,11 @@ document.addEventListener("DOMContentLoaded", () => {
       exit.style.display = "flex";
     }, 13000);
     toBeContinued.removeAttribute("controls");
+    toBeContinuedMobile.removeAttribute("controls");
+
+    toBeContinuedMobile.addEventListener("ended", function () {
+      window.close();
+    });
     toBeContinued.addEventListener("ended", function () {
       window.close();
     });
