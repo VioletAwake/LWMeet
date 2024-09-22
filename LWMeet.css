@@ -170,8 +170,7 @@
   #finalMessage {
     font-size: 35px;
     text-align: center;
-    color: black;
-    margin-top: 430px;
+    color: white;
   }
 
   .imageIndice8 {
@@ -184,17 +183,48 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 30px auto;
+    overflow: auto;
     text-align: center;
-    max-width: 500px;
-    transform: translateX(100%);
-    margin: 20px 0px;
+  }
+
+  .numbersContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .number-input {
+    width: 30px;
+    text-align: center;
+    font-size: 40px;
+    color: green;
+    background-color: black;
+    border: none;
+  }
+
+  #callButton {
+    width: 200px;
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  #callButton:hover {
+    background-color: white;
+    color: black;
   }
 
   .messages-container {
-    position: fixed;
-    top: 120px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     width: 300px;
     text-align: center;
   }
@@ -203,10 +233,16 @@
     background-color: rgba(0, 0, 0, 1);
     color: white;
     padding: 15px;
-    margin: 5px 20px;
+    margin: 5px 10px;
     border-radius: 5px;
     opacity: 0;
     animation: fadeIn 1s forwards;
+  }
+
+  #finalMessage {
+    font-size: 35px;
+    text-align: center;
+    color: black;
   }
 
   @keyframes fadeIn {
@@ -382,6 +418,29 @@
     color: red;
   }
 
+  .imageIndice8 {
+    width: 40vw;
+    height: 60vh;
+  }
+
+  #complete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 30px auto;
+    overflow: auto;
+    text-align: center;
+  }
+
+  .numbersContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   .number-input {
     width: 30px;
     text-align: center;
@@ -406,34 +465,11 @@
     color: black;
   }
 
-  #finalMessage {
-    font-size: 35px;
-    text-align: center;
-    color: black;
-    margin-top: 430px;
-  }
-
-  .imageIndice8 {
-    width: 40vw;
-    height: 60vh;
-  }
-
-  #complete {
+  .messages-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    max-width: 500px;
-    transform: translateX(100%);
-    margin: 20px 0px;
-  }
-
-  .messages-container {
-    position: fixed;
-    top: 120px;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-content: space-between;
     width: 300px;
     text-align: center;
   }
@@ -442,10 +478,16 @@
     background-color: rgba(0, 0, 0, 1);
     color: white;
     padding: 15px;
-    margin: 5px 20px;
+    margin: 5px 10px;
     border-radius: 5px;
     opacity: 0;
     animation: fadeIn 1s forwards;
+  }
+
+  #finalMessage {
+    font-size: 35px;
+    text-align: center;
+    color: black;
   }
 
   @keyframes fadeIn {
